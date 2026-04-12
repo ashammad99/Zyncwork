@@ -196,7 +196,7 @@ export default function UsersPage({ users, filters }) {
                                 ))}
                             </tbody>
                         </table>
-                        
+
                         {users.data.length === 0 && (
                             <div className="py-12 text-center">
                                 <p className="text-gray-500">No users found matching your criteria.</p>
@@ -292,8 +292,9 @@ function EditUserForm({ user, onClose }) {
                         onChange={(e) => setData("role", e.target.value)}
                         className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
                     >
-                        <option value="user">User</option>
                         <option value="admin">Administrator</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
                     </select>
                     {errors.role && (
                         <p className="mt-1 text-xs text-red-600">{errors.role}</p>
@@ -478,8 +479,10 @@ function AddUserForm({ onClose }) {
                         onChange={(e) => setData("role", e.target.value)}
                         className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-sm"
                     >
-                        <option value="user">User</option>
+
                         <option value="admin">Administrator</option>
+                        <option value="manager">Manager</option>
+                        <option value="employee">Employee</option>
                     </select>
                     {errors.role && (
                         <p className="mt-1 text-xs text-red-600">{errors.role}</p>

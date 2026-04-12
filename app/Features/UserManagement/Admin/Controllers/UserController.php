@@ -33,13 +33,13 @@ class UserController extends BaseController
     /**
      * Store a newly created user.
      */
-    public function store(StoreUserRequest $request)
-    {
-
-        $this->userService->createUser($request->validated());
-
-        return redirect()->back()->with('success', 'User created successfully.');
-    }
+//    public function store(StoreUserRequest $request)
+//    {
+//
+//        $this->userService->createUser($request->validated());
+//
+//        return redirect()->back()->with('success', 'User created successfully.');
+//    }
 
     /**
      * Update the specified user details.

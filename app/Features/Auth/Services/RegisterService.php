@@ -16,8 +16,10 @@ class RegisterService extends BaseService
      * @param array $data
      * @return User
      */
+    /*
     public function register(array $data): User
     {
+//        dd($data);
         $user = User::create([
             'name'              => $data['name'],
             'email'             => $data['email'],
@@ -27,7 +29,7 @@ class RegisterService extends BaseService
             'is_active'         => true,
             'email_verified_at' => now(),
             'last_login_at'     => now(),
-            'last_login_ip'     => $data['last_login_ip'],
+            'last_login_ip'     =>request()->ip(),
         ]);
 
         Auth::login($user);
@@ -36,4 +38,5 @@ class RegisterService extends BaseService
 
         return $user;
     }
+    */
 }
