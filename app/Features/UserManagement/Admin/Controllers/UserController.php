@@ -35,6 +35,7 @@ class UserController extends BaseController
      */
     public function store(StoreUserRequest $request)
     {
+
         $this->userService->createUser($request->validated());
 
         return redirect()->back()->with('success', 'User created successfully.');

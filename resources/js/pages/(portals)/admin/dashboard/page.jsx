@@ -6,7 +6,7 @@ import { Users, UsersRound, UserMinus, Activity, Clock } from "lucide-react";
 export default function DashboardPage({ metrics, recent_activity }) {
     return (
         <AdminLayout>
-            <Head title="Admin Dashboard" />
+            <Head title="Admin" />
             <div className="max-w-7xl mx-auto space-y-8 md:pb-12">
                 <div>
                     <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600">
@@ -19,31 +19,31 @@ export default function DashboardPage({ metrics, recent_activity }) {
 
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <MetricCard 
-                        title="Total Users" 
-                        value={metrics.total_users} 
-                        icon={<Users size={24} className="text-blue-600" />} 
+                    <MetricCard
+                        title="Total Users"
+                        value={metrics.total_users}
+                        icon={<Users size={24} className="text-blue-600" />}
                         bg="bg-blue-50"
                         border="border-blue-100"
                     />
-                    <MetricCard 
-                        title="Active Users" 
-                        value={metrics.active_users} 
-                        icon={<UsersRound size={24} className="text-green-600" />} 
+                    <MetricCard
+                        title="Active Users"
+                        value={metrics.active_users}
+                        icon={<UsersRound size={24} className="text-green-600" />}
                         bg="bg-green-50"
                         border="border-green-100"
                     />
-                    <MetricCard 
-                        title="Suspended Users" 
-                        value={metrics.suspended_users} 
-                        icon={<UserMinus size={24} className="text-red-600" />} 
+                    <MetricCard
+                        title="Suspended Users"
+                        value={metrics.suspended_users}
+                        icon={<UserMinus size={24} className="text-red-600" />}
                         bg="bg-red-50"
                         border="border-red-100"
                     />
-                    <MetricCard 
-                        title="Total Activities" 
-                        value={metrics.total_activities} 
-                        icon={<Activity size={24} className="text-purple-600" />} 
+                    <MetricCard
+                        title="Total Activities"
+                        value={metrics.total_activities}
+                        icon={<Activity size={24} className="text-purple-600" />}
                         bg="bg-purple-50"
                         border="border-purple-100"
                     />
@@ -67,7 +67,7 @@ export default function DashboardPage({ metrics, recent_activity }) {
                                         <div key={log.id} className="flex gap-4 relative">
                                             {/* Timeline Line */}
                                             <div className="absolute top-8 bottom-[-24px] left-5 w-px bg-gray-100 last:hidden"></div>
-                                            
+
                                             <div className="w-10 h-10 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 z-10 overflow-hidden">
                                                 {log.user?.profile_image ? (
                                                     <img src={'/storage/' + log.user.profile_image} className="w-full h-full object-cover" />
@@ -109,7 +109,7 @@ export default function DashboardPage({ metrics, recent_activity }) {
                             )}
                         </div>
                     </div>
-                    
+
                     <div className="space-y-6">
                         {/* Quick Links / Summary widget */}
                         <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-6">

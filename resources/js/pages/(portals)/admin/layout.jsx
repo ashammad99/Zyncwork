@@ -18,6 +18,7 @@ import {
     Activity,
     History,
     ShoppingCart,
+    Building2
 } from "lucide-react";
 
 import MainLayout from "../../../Components/Layout/MainLayout";
@@ -55,6 +56,7 @@ export default function AdminLayout({ children }) {
             icon: LayoutDashboard,
         },
         { name: "Users", href: "/admin/users", icon: Users },
+        { name: "Departments", href: "/admin/departments", icon: Building2 },
         {
             name: "Settings",
             href: "/admin/settings",
