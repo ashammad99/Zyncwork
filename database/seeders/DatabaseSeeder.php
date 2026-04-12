@@ -21,10 +21,10 @@ class DatabaseSeeder extends Seeder
         User::factory()->createMany(
             [
                 [
-                    'name' => 'Test User',
-                    'email' => 'test@example.com',
-                    'password' => Hash::make('password'),
-                    'role' => 'user',
+                    'name' => 'Employee user',
+                    'email' => 'emp@example.com',
+                    'password' => Hash::make('12345678'),
+                    'role' => 'employee',
                     'is_active' => true,
                     'profile_image' => null,
                     'last_login_at' => null,
@@ -33,8 +33,18 @@ class DatabaseSeeder extends Seeder
                 [
                     'name' => 'Admin User',
                     'email' => 'admin@example.com',
-                    'password' => Hash::make('password'),
+                    'password' => Hash::make('12345678'),
                     'role' => 'admin',
+                    'is_active' => true,
+                    'profile_image' => null,
+                    'last_login_at' => null,
+                    'last_login_ip' => null,
+                ],
+                [
+                    'name' => 'Manager User',
+                    'email' => 'manager@example.com',
+                    'password' => Hash::make('12345678'),
+                    'role' => 'manager',
                     'is_active' => true,
                     'profile_image' => null,
                     'last_login_at' => null,
