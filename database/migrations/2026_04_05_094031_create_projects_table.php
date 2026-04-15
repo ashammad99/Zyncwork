@@ -19,8 +19,6 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->enum('status', ['active', 'on_hold', 'archived'])->nullable();
             $table->date('deadline')->nullable();
-
-
             $table->foreign('department_id')
                 ->references('id')
                 ->on('departments');

@@ -3,6 +3,7 @@
 namespace App\Features\Auth\Models;
 
 use App\Features\Notification\Admin\Models\Notification;
+use App\Features\Projects\Admin\Models\Project;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -46,5 +47,10 @@ class User extends Authenticatable
     public function notifications()
     {
         return $this->hasMany(Notification::class);
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class, 'owner_id');
     }
 }

@@ -17,8 +17,8 @@ import {
     Zap,
     Activity,
     History,
-    ShoppingCart,
-    Building2
+    Building2,
+    FolderKanban
 } from "lucide-react";
 
 import MainLayout from "../../../Components/Layout/MainLayout";
@@ -57,6 +57,8 @@ export default function AdminLayout({ children }) {
         },
         { name: "Users", href: "/admin/users", icon: Users },
         { name: "Departments", href: "/admin/departments", icon: Building2 },
+        { name: "Projects", href: "/admin/projects", icon:  FolderKanban },
+
         {
             name: "Settings",
             href: "/admin/settings",
